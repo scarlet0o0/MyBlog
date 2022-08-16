@@ -16,7 +16,7 @@ public class MemoController {
     private final MemoService memoService;
     private final ResponseService responseService;
 
-    @PostMapping("/api/memos")
+    @PostMapping("/api/memo")
     public SingleResponse<Memo> createMemo(@RequestBody MemoRequestDto requestDto) {
         Memo memo = new Memo(requestDto);
         memo = memoRepository.save(memo);
@@ -29,25 +29,25 @@ public class MemoController {
         return responseService.getListResponse(memoList);
     }
 
-    @GetMapping("/api/memos/{id}")
+    @GetMapping("/api/memo/{id}")
     public SingleResponse<Memo> getMemo(@PathVariable Long id) {
         Memo memo = memoService.findId(id);
         return responseService.getSingleResponse(memo);
     }
 
-    @PostMapping("/api/memos/{id}")
+    @PostMapping("/api/memo/{id}")
     public SingleResponse<Boolean> isMemoPassword(@PathVariable Long id,@RequestBody MemoRequestDto requestDto){
         Boolean isPassword = memoService.isPassword(id,requestDto.getPassword());
         return responseService.getSingleResponse(isPassword);
     }
 
-    @PutMapping("/api/memos/{id}")
+    @PutMapping("/api/memo/{id}")
     public SingleResponse<Memo> updateMemo(@PathVariable Long id, @RequestBody MemoRequestDto requestDto) {
         Memo memo = memoService.update(id, requestDto);
         return responseService.getSingleResponse(memo);
     }
 
-    @DeleteMapping("/api/memos/{id}")
+    @DeleteMapping("/api/memo/{id}")
     public SingleResponse<Boolean> deleteMemo(@PathVariable Long id) {
         memoRepository.deleteById(id);
         return responseService.getSingleResponse(true);
