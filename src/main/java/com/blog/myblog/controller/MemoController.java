@@ -24,9 +24,15 @@ public class MemoController {
     }
 
     @GetMapping("/api/memos")
-    public ListResponse<Memo> getMemos() {
+    public ListResponse getMemos() {
         List<Memo> memoList = memoRepository.findAllByOrderByModifiedAtDesc();
         return responseService.getListResponse(memoList);
+    }
+
+    @GetMapping("/api/memos/{id}")
+    public SingleResponse<Memo> getMemo(@PathVariable Long id) {
+        Memo memo = memoService.findId(id);
+        return responseService.getSingleResponse(memo);
     }
 
     @PostMapping("/api/memos/{id}")

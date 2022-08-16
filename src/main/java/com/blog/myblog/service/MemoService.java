@@ -16,18 +16,22 @@ public class MemoService {
 
     @Transactional
     public Memo update(Long id, MemoRequestDto requestDto) {
-        Memo memo = memoRepository.findById(id).orElseThrow(
-                () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
-        );
+        Memo memo = findId(id);
         memo.update(requestDto);
         return memo;
     }
 
     @Transactional
     public Boolean isPassword(Long id, String password){
+        Memo memo = findId(id);
+        return password.equals(memo.getPassword());
+    }
+
+    @Transactional
+    public Memo findId(Long id) {
         Memo memo = memoRepository.findById(id).orElseThrow(
                 () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
         );
-        return password.equals(memo.getPassword());
+        return memo;
     }
 }

@@ -2,6 +2,7 @@ package com.blog.myblog.service;
 
 import com.blog.myblog.domain.CommonResponse;
 import com.blog.myblog.domain.ListResponse;
+import com.blog.myblog.domain.Memo;
 import com.blog.myblog.domain.SingleResponse;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +18,9 @@ public class ResponseService {
         return singleResponse;
     }
 
-    public<T> ListResponse<T> getListResponse(List<T> data){
+    public ListResponse getListResponse(List<Memo> data){
         ListResponse listResponse = new ListResponse();
-        listResponse.setDataList(data);
+        listResponse.setMemoDtoList(data);
         setSuccessResponse(listResponse);
 
         return listResponse;
