@@ -7,4 +7,4 @@
 ## 기술 스택
 | JavaScript | TypeScript |  React   |  Node   |
 | :--------: | :--------: | :------: | :-----: |
-|<img src="https://images.velog.io/images/ayoung0073/post/2db5c70c-d494-4cca-ad58-7b4eaabc3c9a/springboot.jpeg">|   ![ts]    | ![react] | ![node] |
+|<img src="https://images.velog.io/images/ayoung0073/post/2db5c70c-d494-4cca-ad58-7b4eaabc3c9a/springboot.jpeg" witdh="100" height="100">|   ![ts]    | ![react] | ![node] |
