@@ -2,7 +2,7 @@
 > 스프링 부트로 블로그 백엔드 서버 만들기.
 
 스프링과 aws를 이용하여 웹 api서버를 만들고 배포를 해보았다.
-<img src="https://images.velog.io/images/hanblueblue/post/c5ac9eb1-2004-4d5d-9688-9abc31da5438/OG-Spring.png" width="300" height=">
+<img src="https://images.velog.io/images/hanblueblue/post/c5ac9eb1-2004-4d5d-9688-9abc31da5438/OG-Spring.png"  height="300">
 
 <br>
 
