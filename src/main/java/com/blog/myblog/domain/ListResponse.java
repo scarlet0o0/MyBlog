@@ -1,5 +1,6 @@
 package com.blog.myblog.domain;
 
+import com.blog.myblog.dto.MemoListResponseDto;
 import lombok.Getter;
 import lombok.Setter;
 

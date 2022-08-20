@@ -1,5 +1,6 @@
-package com.blog.myblog.domain;
+package com.blog.myblog.dto;
 
+import com.blog.myblog.domain.Memo;
 import lombok.Getter;
 
 import java.time.LocalDateTime;

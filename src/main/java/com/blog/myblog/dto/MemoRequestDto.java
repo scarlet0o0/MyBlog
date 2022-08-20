@@ -1,4 +1,4 @@
-package com.blog.myblog.domain;
+package com.blog.myblog.dto;
 
 import lombok.Getter;
 

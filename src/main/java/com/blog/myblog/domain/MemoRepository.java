@@ -1,5 +1,6 @@
 package com.blog.myblog.domain;
 
+import com.blog.myblog.domain.Memo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

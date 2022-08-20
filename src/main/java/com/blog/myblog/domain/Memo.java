@@ -1,5 +1,6 @@
 package com.blog.myblog.domain;
 
+import com.blog.myblog.dto.MemoRequestDto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

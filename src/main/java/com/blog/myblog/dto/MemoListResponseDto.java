@@ -1,5 +1,6 @@
-package com.blog.myblog.domain;
+package com.blog.myblog.dto;
 
+import com.blog.myblog.domain.Memo;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -10,7 +11,7 @@ public class MemoListResponseDto {
     private String username;
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
-    MemoListResponseDto(Memo memo){
+    public MemoListResponseDto(Memo memo){
         this.title = memo.getTitle();
         this.username = memo.getUsername();
         this.createdAt = memo.getCreatedAt();
