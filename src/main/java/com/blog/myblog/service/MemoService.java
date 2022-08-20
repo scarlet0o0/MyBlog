@@ -1,7 +1,7 @@
 package com.blog.myblog.service;
 
 import com.blog.myblog.domain.Memo;
-import com.blog.myblog.domain.MemoRepository;
+import com.blog.myblog.repository.MemoRepository;
 import com.blog.myblog.dto.MemoRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
