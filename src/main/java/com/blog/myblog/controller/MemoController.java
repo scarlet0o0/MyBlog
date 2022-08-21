@@ -1,7 +1,7 @@
 package com.blog.myblog.controller;
 
 import com.blog.myblog.domain.*;
-import com.blog.myblog.repository.MemoRepository;
+import com.blog.myblog.repository.*;
 import com.blog.myblog.dto.MemoRequestDto;
 import com.blog.myblog.service.MemoService;
 import com.blog.myblog.service.ResponseService;

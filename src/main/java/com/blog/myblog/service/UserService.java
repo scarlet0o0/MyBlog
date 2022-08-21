@@ -1,6 +1,6 @@
 package com.blog.myblog.service;
 
-import com.blog.myblog.domain.User;
+import com.blog.myblog.domain.Users;
 import com.blog.myblog.dto.SignupRequestDto;
 import com.blog.myblog.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +22,14 @@ public class UserService{
         String username = requestDto.getUsername();
         String password = requestDto.getPassword();
         // 회원 ID 중복 확인
-        Optional<User> found = userRepository.findByUsername(username);
+        System.out.println(username);
+        System.out.println(password);
+        Optional<Users> found = userRepository.findByUsername(username);
         if (found.isPresent()) {
             throw new IllegalArgumentException("중복된 사용자 ID 가 존재합니다.");
         }
 
-        User user = new User(username, password);
-        userRepository.save(user);
+        Users users = new Users(username, password);
+        userRepository.save(users);
     }
 }
