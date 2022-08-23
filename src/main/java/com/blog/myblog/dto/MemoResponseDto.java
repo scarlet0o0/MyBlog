@@ -13,7 +13,7 @@ public class MemoResponseDto {
     private LocalDateTime modifiedAt;
     private String contents;
 
-    MemoResponseDto (Memo memo){
+    public MemoResponseDto(Memo memo){
         this.title = memo.getTitle();
         this.username = memo.getUsername();
         this.createdAt = memo.getCreatedAt();

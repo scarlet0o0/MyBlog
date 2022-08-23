@@ -1,11 +1,11 @@
 package com.blog.myblog.dto;
 
 import lombok.Getter;
-import lombok.Setter;
 
-@Setter
 @Getter
-public class SignupRequestDto{
+public class CommentRequestDto {
+    private Long memoId;
     private String username;
-    private String password;
+    private String contents;
+
 }

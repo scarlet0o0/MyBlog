@@ -3,18 +3,16 @@ package com.blog.myblog.dto;
 import com.blog.myblog.domain.Memo;
 import lombok.Getter;
 
-import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 public class MemoListResponseDto {
-    private String title;
-    private String username;
-    private LocalDateTime createdAt;
-    private LocalDateTime modifiedAt;
-    public MemoListResponseDto(Memo memo){
-        this.title = memo.getTitle();
-        this.username = memo.getUsername();
-        this.createdAt = memo.getCreatedAt();
-        this.modifiedAt = memo.getModifiedAt();
+    private ArrayList<MemoResponseDto> memoListDta = new ArrayList<MemoResponseDto>();
+
+    public MemoListResponseDto(List<Memo> memoList){
+        for(Memo memo:memoList){
+            memoListDta.add(new MemoResponseDto(memo));
+        }
     }
 }

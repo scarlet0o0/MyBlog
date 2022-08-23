@@ -28,12 +28,6 @@ public class Memo extends Timestamped { // 생성,수정 시간을 자동으로 
     @JsonIgnore //데이터를 리스폰할때 안보내줌
     private String password;
 
-
-    public Memo(String username, String contents) {
-        this.username = username;
-        this.contents = contents;
-    }
-
     public Memo(MemoRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.username = requestDto.getUsername();
